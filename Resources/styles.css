@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#main {
+    display: flex;
+    background-color: rgb(229, 255, 229);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #7992a48c;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.locati {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.file {
+    background-color: #313c5bec;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.file a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.file:hover {
+    background-color: #2980b9;
+}
+
+
+/* Add this CSS for the PDF viewer container and fade-in animation */
+.pdf-viewer-container {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.pdf-viewer-container.fade-in {
+    opacity: 1;
+}

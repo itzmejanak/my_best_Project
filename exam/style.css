@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#main-con{
+    height: 90%;
+    width: 100%;
+    /* background-color: #0e1215; */
+}
+:root {
+    --padding: 4rem;
+    --border: hsl(0, 0%, 20%);
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h3 {
+    font-size: 2.8rem;
+  }
+  
+  body {
+    background: #000000;
+    color: #ffffff;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .heading {
+    line-height: 2;
+    font-weight: 900;
+  }
+  
+  .section-container {
+    padding: var(--padding);
+  }
+  
+  .section-container a {
+    color: #ffffff;
+  }
+  
+  .schedule-container {
+    overflow: auto;
+  }
+  
+  .schedule-stage__wrapper {
+    display: inline-block;
+  }
+  
+  .schedule-stage {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    grid-gap: 2rem;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+    min-width: 100vw;
+  }
+  
+  .schedule-stage::after {
+    content: "";
+    width: var(--padding);
+  }
+  
+  .divider {
+    position: sticky;
+    left: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .schedule-stage:nth-child(1) > .schedule-stage__title > h3 {
+    background: linear-gradient(to right, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .schedule-stage:nth-child(3) > .schedule-stage__title > h3 {
+    background: linear-gradient(to right, #a8ff78, #78ffd6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .schedule-stage:nth-child(5) > .schedule-stage__title > h3 {
+    background: linear-gradient(to right, #007991, #78ffd6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .schedule-stage:nth-child(7) > .schedule-stage__title > h3 {
+    background: linear-gradient(to right, #4b79a1, #283e51);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .schedule-stage:nth-child(9) > .schedule-stage__title > h3 {
+    background: linear-gradient(to right, #f12711, #f5af19);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .schedule-stage__title {
+    position: sticky;
+    left: 0;
+    padding-right: 5rem;
+    height: 100%;
+    padding-left: var(--padding);
+    background: linear-gradient(to right, #000000 30%, hsla(0, 0%, 0%, 0));
+  }
+  
+  .schedule-stage__title > h3 {
+    font-weight: 900;
+  }
+  
+  .schedule-stage_guide-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 280px;
+    grid-gap: 2rem;
+  }
+  
+  .guide-slot {
+    color: hsl(0, 0%, 50%);
+  }
+  
+  .guide-slot > p {
+    margin-bottom: 1rem;
+  }
+  
+  .guide-slot_card {
+    background: hsl(0, 0%, 4%);
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    padding: 1.6rem;
+    cursor: pointer;
+  }
+  
+  .guide-slot_card:hover {
+    border-color: hsl(0, 0%, 70%);
+  }
+  
+  .guide-slot_card > h4 {
+    margin-right: 5rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+  
+  .author-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .author-wrapper > svg {
+    display: inline-block;
+    inline-size: 2.6rem;
+    block-size: 2.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+    border: 1px solid var(--border);
+  }
+  
+  .author-wrapper > svg > img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes rotate {
+    to {
+    }
+  }
+  
+  .pie {
+    width: 100%;
+    background: #f06;
+    border-radius: 50%;
+  }
+  
+  .pie circle {
+    fill: none;
+    stroke: gold;
+    stroke-width: 32;
+    animation: rotate 1.5s ease-in;
+  }
+  
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .pie {
+    width: 100%;
+    background: #f06;
+    border-radius: 50%;
+    animation: rotate 4s linear infinite; /* Adjust the duration and timing function as needed */
+  }
+
+  
+  @keyframes rotate1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotate5 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+/* Add more keyframes for the remaining sections */
+
+.schedule-stage:nth-child(1) .pie {
+  animation: rotate1 4s linear infinite;
+}
+
+.schedule-stage:nth-child(2) .pie {
+  animation: rotate2 4s linear infinite;
+}
+
+.schedule-stage:nth-child(3) .pie {
+  animation: rotate3 4s linear infinite;
+}
+
+.schedule-stage:nth-child(4) .pie {
+  animation: rotate4 4s linear infinite;
+}
+
+.schedule-stage:nth-child(5) .pie {
+  animation: rotate5 4s linear infinite;
+}
+
+/* Add more styling for the remaining sections */
+
+
+/* Keyframes for the first element */
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Keyframes for the second element */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Apply animations to elements with specific IDs or classes */
+  #element1 {
+    animation: slideIn 2s ease-in-out;
+  }
+  
+  .element2 {
+    animation: fadeInOut 3s ease-in-out infinite;
+  }
+
+  /* Keyframes for the guide-slot_card */
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply the scaleIn animation to the guide-slot_card */
+.guide-slot_card {
+  animation: scaleIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Add hover effect */
+.guide-slot_card:hover {
+  animation: none; /* Stop the initial animation on hover */
+  transform: scale(0.97); /* Scale up on hover */
+}
+
+ /* Add this to your existing CSS */
+
+.event-status-container {
+    position: relative;
+    top: 60px;
+    right: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.event-status {
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.guide-slot_card.upcoming .event-status {
+    background-color: #ffc107; /* Style for upcoming events */
+}
+
+.guide-slot_card.expired .event-status {
+    background-color: #dc3545; /* Style for expired events */
+}
+
+.remaining-days{
+    color: #47ab11;
+}
+ 
