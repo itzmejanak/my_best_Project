@@ -35,7 +35,7 @@ function updateEventStatus() {
         const timeDifference = eventDate - currentDate;
         const daysUntilExam = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-        if (daysUntilExam >= -30 && daysUntilExam <= 0) {
+        if (daysUntilExam <= 30 && daysUntilExam >= 0) {
             // New event (within 30 days of the current date)
             scheduleStage.classList.add("upcoming");
             eventStatusElement.textContent = "new";
@@ -56,5 +56,3 @@ function updateEventStatus() {
 
 // Call the function to update event status
 updateEventStatus();
-
-
