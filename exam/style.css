@@ -548,3 +548,9 @@ to {
 .remaining-days{
   color: #47ab11;
 }
+
+@media only screen and (max-width: 760px) {
+h3{
+	font-size: 10px;
+}
+}
