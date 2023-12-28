@@ -190,9 +190,9 @@ body {
   cursor: pointer;
 }
 
-.guide-slot_card:hover {
-  border-color: hsl(0, 0%, 70%);
-}
+/* .guide-slot_card:hover { */
+  /* border-color: hsl(0, 0%, 70%); */
+/* } */
 
 .guide-slot_card > h4 {
   margin-right: 5rem;
@@ -508,7 +508,7 @@ to {
         animation: none; /* Stop the initial animation on hover */
 -webkit-transform: scale(0.97);
     -ms-transform: scale(0.97);
-        transform: scale(0.97); /* Scale up on hover */
+        transform: scale(0.97); /* Scale up on hover */ 
 }
 
 /* Add this to your existing CSS */
@@ -538,7 +538,11 @@ to {
 }
 
 .guide-slot_card.expired .event-status {
-  background-color: #dc3545; /* Style for expired events */
+  background-color: black; /* Style for expired events */
+}
+
+.guide-slot_card.soon .event-status {
+  background-color: red; /* Style for expired events */
 }
 
 .remaining-days{

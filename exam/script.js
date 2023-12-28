@@ -32,18 +32,18 @@ function updateEventStatus() {
         const eventStatusElement = scheduleStage.querySelector('.event-status');
         const remainingDaysElement = scheduleStage.querySelector('.remaining-days');
 
-        const timeDifference = eventDate - currentDate;
-        const daysUntilExam = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const timeDifference = (eventDate - currentDate);
+        const daysUntilExam = Math.floor(timeDifference / (1000 * 60 * 60 * 24)) +1;
 
         if (daysUntilExam <= 30 && daysUntilExam >= 0) {
             // New event (within 30 days of the current date)
-            scheduleStage.classList.add("upcoming");
-            eventStatusElement.textContent = "new";
+            scheduleStage.classList.add("soon");
+            eventStatusElement.textContent = "soon";
             remainingDaysElement.textContent = `(${Math.abs(daysUntilExam)} days)`;
         } else if (eventDate > currentDate) {
             // Upcoming event
             scheduleStage.classList.add("upcoming");
-            eventStatusElement.textContent = "pending";
+            eventStatusElement.textContent = "upcoming";
             remainingDaysElement.textContent = `(${daysUntilExam} days)`;
         } else {
             // Expired event
