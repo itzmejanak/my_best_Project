@@ -190,9 +190,9 @@ body {
   cursor: pointer;
 }
 
-/* .guide-slot_card:hover { */
-  /* border-color: hsl(0, 0%, 70%); */
-/* } */
+.guide-slot_card:hover {
+  border-color: hsl(0, 0%, 70%);
+}
 
 .guide-slot_card > h4 {
   margin-right: 5rem;
@@ -251,6 +251,30 @@ body {
           animation: rotate 1.5s ease-in;
 }
 
+@keyframes hourglass {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.hourglass {
+  -webkit-animation: hourglass 4s linear infinite;
+  -moz-animation: hourglass 4s linear infinite;
+  -ms-animation: hourglass 4s linear infinite;
+  -o-animation: hourglass 4s linear infinite;
+  animation: hourglass 4s linear infinite;
+}
+
 
 @keyframes rotate {
   from {
@@ -272,143 +296,143 @@ body {
 }
 
 
-@-webkit-keyframes rotate1 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-}
+/* @-webkit-keyframes rotate1 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(360deg); */
+          /* transform: rotate(360deg); */
+/* } */
+/* } */
 
 
-@keyframes rotate1 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-}
+/* @keyframes rotate1 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(360deg); */
+          /* transform: rotate(360deg); */
+/* } */
+/* } */
 
-@-webkit-keyframes rotate2 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
-}
-}
+/* @-webkit-keyframes rotate2 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(-360deg); */
+          /* transform: rotate(-360deg); */
+/* } */
+/* } */
 
-@keyframes rotate2 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
-}
-}
+/* @keyframes rotate2 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(-360deg); */
+          /* transform: rotate(-360deg); */
+/* } */
+/* } */
 
-@-webkit-keyframes rotate3 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-}
+/* @-webkit-keyframes rotate3 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(180deg); */
+          /* transform: rotate(180deg); */
+/* } */
+/* } */
 
-@keyframes rotate3 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-}
+/* @keyframes rotate3 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(180deg); */
+          /* transform: rotate(180deg); */
+/* } */
+/* } */
 
-@-webkit-keyframes rotate4 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-}
+/* @-webkit-keyframes rotate4 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(-180deg); */
+          /* transform: rotate(-180deg); */
+/* } */
+/* } */
 
-@keyframes rotate4 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-}
+/* @keyframes rotate4 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(-180deg); */
+          /* transform: rotate(-180deg); */
+/* } */
+/* } */
 
-@-webkit-keyframes rotate5 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-}
+/* @-webkit-keyframes rotate5 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(90deg); */
+          /* transform: rotate(90deg); */
+/* } */
+/* } */
 
-@keyframes rotate5 {
-from {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-to {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-}
+/* @keyframes rotate5 { */
+/* from { */
+  /* -webkit-transform: rotate(0deg); */
+          /* transform: rotate(0deg); */
+/* } */
+/* to { */
+  /* -webkit-transform: rotate(90deg); */
+          /* transform: rotate(90deg); */
+/* } */
+/* } */
 
-/* Add more keyframes for the remaining sections */
+/* /* Add more keyframes for the remaining sections */ */
 
-.schedule-stage:nth-child(1) .pie {
--webkit-animation: rotate1 4s linear infinite;
-        animation: rotate1 4s linear infinite;
-}
+/* .schedule-stage:nth-child(1) .pie { */
+/* -webkit-animation: rotate1 4s linear infinite; */
+        /* animation: rotate1 4s linear infinite; */
+/* } */
 
-.schedule-stage:nth-child(2) .pie {
--webkit-animation: rotate2 4s linear infinite;
-        animation: rotate2 4s linear infinite;
-}
+/* .schedule-stage:nth-child(2) .pie { */
+/* -webkit-animation: rotate2 4s linear infinite; */
+        /* animation: rotate2 4s linear infinite; */
+/* } */
 
-.schedule-stage:nth-child(3) .pie {
--webkit-animation: rotate3 4s linear infinite;
-        animation: rotate3 4s linear infinite;
-}
+/* .schedule-stage:nth-child(3) .pie { */
+/* -webkit-animation: rotate3 4s linear infinite; */
+        /* animation: rotate3 4s linear infinite; */
+/* } */
 
-.schedule-stage:nth-child(4) .pie {
--webkit-animation: rotate4 4s linear infinite;
-        animation: rotate4 4s linear infinite;
-}
+/* .schedule-stage:nth-child(4) .pie { */
+/* -webkit-animation: rotate4 4s linear infinite; */
+        /* animation: rotate4 4s linear infinite; */
+/* } */
 
-.schedule-stage:nth-child(5) .pie {
--webkit-animation: rotate5 4s linear infinite;
-        animation: rotate5 4s linear infinite;
-}
+/* .schedule-stage:nth-child(5) .pie { */
+/* -webkit-animation: rotate5 4s linear infinite; */
+        /* animation: rotate5 4s linear infinite; */
+/* } */
 
 /* Add more styling for the remaining sections */
 
@@ -504,8 +528,8 @@ to {
 
 /* Add hover effect */
 .guide-slot_card:hover {
--webkit-animation: none;
-        animation: none; /* Stop the initial animation on hover */
+/* -webkit-animation: none; */
+      /*   animation: none; Stop the initial animation on hover */
 -webkit-transform: scale(0.97);
     -ms-transform: scale(0.97);
         transform: scale(0.97); /* Scale up on hover */ 

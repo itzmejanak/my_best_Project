@@ -22,6 +22,8 @@ const formattedDate = currentDate.toLocaleDateString('en-US', options);
 
 document.getElementById("date").innerHTML = `📅 ${formattedDate}`;
 
+var nearestExam=365;
+var nearestExam2=365;
 
 function updateEventStatus() {
     const currentDate = new Date();
@@ -34,6 +36,15 @@ function updateEventStatus() {
 
         const timeDifference = (eventDate - currentDate);
         const daysUntilExam = Math.floor(timeDifference / (1000 * 60 * 60 * 24)) +1;
+		
+		
+		if (daysUntilExam >= 0) {
+		if(daysUntilExam<nearestExam){
+			nearestExam2=nearestExam;
+			nearestExam=daysUntilExam;
+		}
+		document.getElementById("nextExam").innerHTML = `Next Exam in: ${nearestExam} days and ${nearestExam2} days`;
+		}
 
         if (daysUntilExam <= 30 && daysUntilExam >= 0) {
             // New event (within 30 days of the current date)
