@@ -16,11 +16,18 @@ function updateAuthorPercentage() {
 
 window.onload = updateAuthorPercentage;
 
+const referenceDate = new Date('2023-11-19');
+function getWeekNumber(){
+	const differenceInTime = new Date().getTime() - referenceDate.getTime();
+	const differenceInWeeks = Math.floor(differenceInTime / (1000 * 3600 * 24 * 7));
+	return 	differenceInWeeks+3;
+}
+
 const currentDate = new Date();
-const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+const options = { weekday: 'long', day: 'numeric', month: 'long'};
 const formattedDate = currentDate.toLocaleDateString('en-US', options);
 
-document.getElementById("date").innerHTML = `📅 ${formattedDate}`;
+document.getElementById("date").innerHTML = `📅 Week ${getWeekNumber()}: ${formattedDate} ${currentDate.getFullYear()}`;
 
 var nearestExam=365;
 var nearestExam2=365;
