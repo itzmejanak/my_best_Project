@@ -38,8 +38,10 @@ const soonCountDiv=document.getElementById("soonCount");
 const upcomingCountDiv=document.getElementById("upcomingCount");
 const expiredCountDiv=document.getElementById("expiredCount");
 const divList=[allCountDiv,soonCountDiv,upcomingCountDiv,expiredCountDiv];
+var cantChange=false;
 
 function showDiv(clas){	
+	if(clas!="guide-slot_card"){cantChange=true;}
 	Array.from(document.getElementsByClassName("guide-slot")).forEach(function(element) {
 		if((element.getElementsByClassName("guide-slot_card")[0].classList).contains(clas)){
 			element.classList.remove("hide");
@@ -48,6 +50,7 @@ function showDiv(clas){
 			element.classList.add("hide");
 			setTimeout(function(){
     element.classList.add("invisible");
+	cantChange=false;
 }, 1500); 
 
 		}
@@ -63,10 +66,10 @@ function selectDiv(div){
 	});
 }
 
-allCountDiv.onclick = function() { selectDiv(0); showDiv('guide-slot_card') };
-soonCountDiv.onclick = function() { selectDiv(1); showDiv('soon') };
-upcomingCountDiv.onclick = function() { selectDiv(2);  showDiv('upcoming') };
-expiredCountDiv.onclick = function() { selectDiv(3);  showDiv('expired') };
+allCountDiv.onclick = function() { if(cantChange){return;} selectDiv(0); showDiv('guide-slot_card') };
+soonCountDiv.onclick = function() { if(cantChange){return;} selectDiv(1); showDiv('soon') };
+upcomingCountDiv.onclick = function() { if(cantChange){return;} selectDiv(2);  showDiv('upcoming') };
+expiredCountDiv.onclick = function() { if(cantChange){return;} selectDiv(3);  showDiv('expired') };
 
 
 function updateEventStatus() {

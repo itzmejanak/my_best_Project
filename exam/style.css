@@ -521,7 +521,7 @@ to {
 }
 
 /* Apply the scaleIn animation to the guide-slot_card */
-.guide-slot_card {
+.guide-slot {
 -webkit-animation: scaleIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         animation: scaleIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
