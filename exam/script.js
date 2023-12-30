@@ -43,8 +43,13 @@ function showDiv(clas){
 	Array.from(document.getElementsByClassName("guide-slot")).forEach(function(element) {
 		if((element.getElementsByClassName("guide-slot_card")[0].classList).contains(clas)){
 			element.classList.remove("hide");
+			element.classList.remove("invisible");
 		}else{
 			element.classList.add("hide");
+			setTimeout(function(){
+    element.classList.add("invisible");
+}, 1500); 
+
 		}
 	});
 }
