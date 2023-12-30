@@ -578,3 +578,11 @@ h3{
 	font-size: 10px;
 }
 }
+.hide{
+	display:none;
+}
+
+.selected {
+  border-color: hsl(0, 0%, 70%);
+  border: 2px solid;
+}
