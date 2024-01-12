@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+}
+
+#top{
+    color: aliceblue;
+    text-align: center;
+}
+#main {
+    /* height: 100vh; */
+    width: 100%;
+    background-color: rgb(30, 27, 48);
+}
+
+#container {
+    padding: 30px;
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.apk {
+    box-shadow: 2px 9px 15px rgba(3, 80, 110, 0.174); /* Add box shadow for depth */
+    transition: 1s ease-in-out; /* Smooth background color transition */
+    padding: 8px;
+    /* border: 1px solid wheat; */
+    border-radius: 5px;
+    flex-basis: 48%; /* Adjust this value as needed */
+    /* height: 10vh; */
+    background-color: transparent;
+}
+
+.apk:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    transition: 1s ease
+}
+
+
+.details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 14px;
+    height: 50px;
+    border-radius: 50px;
+    width: 50px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.icon img{
+    /* margin: 20px; */
+    padding: 5px;
+    height: 50px;
+    border-radius: 50px;
+    width: 50px;
+    border: 2px solid rgb(226, 207, 207);
+}
+
+.details-text h1{
+    color: aliceblue;
+    font-size: 10px;
+
+}
+
+.details-text p{
+    padding-top: 7px;
+    color: rgb(169, 179, 187);
+    font-size:8px;
+}
