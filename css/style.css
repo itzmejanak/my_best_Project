@@ -121,27 +121,6 @@ ul
     margin-right: -15px;
     position: relative;
 }
-
-.password-dialog {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.password-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    max-width: 400px;
-    text-align: center;
-}
-
 #cursor{
     height: 25px;
     width: 25px;
@@ -187,6 +166,83 @@ ul
 {
     box-shadow:0 0 20px rgba(48, 46, 77, 0.15) ;
 }
+
+
+#main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#con {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 95%;
+    height: 70px;
+    display: none;
+    background-color: transparent;
+    position: fixed; /* Change position to fixed */
+    bottom: 0; /* Stick it to the bottom */
+}
+
+.box {
+    height: 60px;
+    width: 45%;
+    background-color: transparent;
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 3s ease;
+    overflow: hidden;
+}
+
+.box:hover {
+    background-color: crimson;
+    transition: 3s ease;
+    cursor: pointer;
+}
+
+.box3, .box1, .box5 {
+    margin: 10px auto; /* Center box3 horizontally */ 
+}
+
+.box a{
+    font-size: 15px;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: rgb(4, 13, 20);
+}
+@media only screen and (max-width: 768px) {
+    #con {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 95%;
+        height: 70px;
+        background-color: transparent;
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .box a{
+        font-size: 13px;
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        color: rgb(4, 13, 20);
+    }
+
+    .box{
+        height: 40px;
+    }
+}
+
+
 
 
 /*aside*/

@@ -41,23 +41,23 @@ function sendMail(){
       message => alert(message)
     );
 }
+// Select all elements with the class "box"
+const boxes = document.querySelectorAll(".box");
 
+// Loop through each box element
+boxes.forEach(box => {
+    // Add a click event listener to each box
+    box.addEventListener("click", function() {
+        // Remove background color from all boxes
+        boxes.forEach(otherBox => {
+            otherBox.style.backgroundColor = "transparent";
+            otherBox.style.boxShadow = "none";
+            otherBox.style.borderRadius = "3px";
+        });
 
-function checkPassword() {
-    var passwordInput = document.getElementById("password").value;
-    var correctPassword = "yourpassword"; // Replace with your desired password
-
-    if (passwordInput === correctPassword) {
-        // Correct password, show the exam content
-        document.getElementById("password-dialog").style.display = "none";
-        document.getElementById("exam-content").style.display = "block";
-    } else {
-        // Incorrect password, display an error message or take appropriate action
-        alert("Incorrect password. Please try again.");
-    }
-}
-
-document.getElementById("exam-link").addEventListener("click", function () {
-    // Show the password dialog when the "Exam" link is clicked
-    document.getElementById("password-dialog").style.display = "flex";
+        // Set background color only for the clicked box
+        this.style.backgroundColor = "crimson";
+        this.style.boxShadow = "1px 1px 5px black";
+        // this.style.borderRadius = "15px";
+    });
 });
