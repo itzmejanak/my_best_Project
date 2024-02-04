@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Define a color palette */
+:root {
+    --primary-color: #334257; /* Dark teal */
+--secondary-color: #548CA8; /* Light teal */
+--text-color: #EEEEEE; /* Light gray */
+--background-color: #476072; /* Dark teal */
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,78 +20,89 @@ html, body {
     width: 100%;
 }
 
-#top{
-    color: aliceblue;
+#top {
+    color: var(--text-color);
     text-align: center;
+    padding: 20px 0;
+    z-index: 99;
+    background-color: rgb(4, 28, 39);
+    /* background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
 }
+
 #main {
-    /* height: 100vh; */
     width: 100%;
-    background-color: rgb(30, 27, 48);
+    background-color: rgb(3, 16, 24);
+    /* background-color: var(--background-color); */
 }
 
 #container {
-    padding: 30px;
-    /* height: 100%; */
+    padding: 20px;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .apk {
-    box-shadow: 2px 9px 15px rgba(3, 80, 110, 0.174); /* Add box shadow for depth */
-    transition: 1s ease-in-out; /* Smooth background color transition */
-    padding: 8px;
-    /* border: 1px solid wheat; */
-    border-radius: 5px;
-    flex-basis: 48%; /* Adjust this value as needed */
-    /* height: 10vh; */
-    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+    flex-basis: calc(50% - 20px);
+    /* background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
+    color: var(--text-color); /* Set text color to white */
+    margin-bottom: 1px;
+    overflow: hidden;
+    background-color: rgb(4, 28, 39);
 }
 
 .apk:hover {
-    transform: scale(1.05); /* Scale up on hover */
-    transition: 1s ease
+    transform: translateY(-5px); /* Move up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a larger shadow on hover */
 }
 
-
-.details{
+.details {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.icon{
+.icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 14px;
     height: 50px;
-    border-radius: 50px;
     width: 50px;
-    border: 2px solid rgb(0, 0, 0);
+    padding: 7px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    overflow: hidden;
 }
 
-.icon img{
-    /* margin: 20px; */
-    padding: 5px;
-    height: 50px;
-    border-radius: 50px;
-    width: 50px;
-    border: 2px solid rgb(226, 207, 207);
+.icon img {
+    width: 100%;
+    height: auto;
 }
 
-.details-text h1{
-    color: aliceblue;
-    font-size: 10px;
-
+.details-text {
+    color: var(--text-color); /* Set text color to white */
 }
 
-.details-text p{
-    padding-top: 7px;
-    color: rgb(169, 179, 187);
-    font-size:8px;
+.details-text h1 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.details-text p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .apk {
+        flex-basis: calc(100% - 20px); /* Adjust width for smaller screens */
+    }
 }
