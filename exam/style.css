@@ -615,9 +615,13 @@ h3{
 }
 
 .selected {
-  border-color: hsl(0, 0%, 70%);
-  border: 2px solid;
+  border: 2px solid silver;
 }
+/*
+#allCount.selected{
+	border: 2px solid green;
+}
+*/
 .top-stat{
 	margin: 5px;
 	cursor: pointer;
