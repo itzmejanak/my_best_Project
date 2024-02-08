@@ -53,6 +53,7 @@ function showDiv(clas1,clas2=clas1){
 			element.classList.remove("invisible");
 		}else{
 			element.classList.add("hide");
+			if(clas2!=clas1){element.classList.add("invisible");}
 			setTimeout(function(){
     element.classList.add("invisible");
 	cantChange=false;
@@ -75,7 +76,6 @@ function initialStat(){
 	selectDiv(1,2);
 	showDiv('soon','upcoming');
 }
-initialStat();
 
 allCountDiv.onclick = function() { if(cantChange){return;} selectDiv(0); showDiv('guide-slot_card') };
 soonCountDiv.onclick = function() { if(cantChange){return;} selectDiv(1); showDiv('soon') };
@@ -132,3 +132,4 @@ function updateEventStatus() {
 
 // Call the function to update event status
 updateEventStatus();
+initialStat();
