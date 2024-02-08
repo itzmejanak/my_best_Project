@@ -66,7 +66,7 @@ function showDiv(clas1,clas2=clas1){
 function selectDiv(div1,div2=div1){
 	var i=0;
 	divList.forEach(function(element) {
-		if(i==div1 || i==div2){if(div1!=0 && div2!=0){element.classList.add("selected");}}
+		if(i==div1 || i==div2){element.classList.add("selected");}
 		else{element.classList.remove("selected");}
 		i++;
 	});
