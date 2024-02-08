@@ -34,16 +34,21 @@ var nearestExam2=365;
 
 var allCount=soonCount=upcomingCount=expiredCount=0;
 const allCountDiv=document.getElementById("allCount");
+allCountDiv.innerHTML = "All: 0";
 const soonCountDiv=document.getElementById("soonCount");
+soonCountDiv.innerHTML = "Soon: 0";
 const upcomingCountDiv=document.getElementById("upcomingCount");
+upcomingCountDiv.innerHTML = "Upcoming: 0";
 const expiredCountDiv=document.getElementById("expiredCount");
+expiredCountDiv.innerHTML = "Expired: 0";
 const divList=[allCountDiv,soonCountDiv,upcomingCountDiv,expiredCountDiv];
 var cantChange=false;
 
-function showDiv(clas){	
-	if(clas!="guide-slot_card"){cantChange=true;}
+function showDiv(clas1,clas2=clas1){	
+	if(clas1!="guide-slot_card" || clas2!="guide-slot_card"){cantChange=true;}
 	Array.from(document.getElementsByClassName("guide-slot")).forEach(function(element) {
-		if((element.getElementsByClassName("guide-slot_card")[0].classList).contains(clas)){
+		var curelement=element.getElementsByClassName("guide-slot_card")[0].classList
+		if(curelement.contains(clas1) || curelement.contains(clas2)){
 			element.classList.remove("hide");
 			element.classList.remove("invisible");
 		}else{
@@ -57,14 +62,20 @@ function showDiv(clas){
 	});
 }
 
-function selectDiv(div){
+function selectDiv(div1,div2=div1){
 	var i=0;
 	divList.forEach(function(element) {
-		if(i==div){if(div!=0){element.classList.add("selected");}}
+		if(i==div1 || i==div2){if(div1!=0 && div2!=0){element.classList.add("selected");}}
 		else{element.classList.remove("selected");}
 		i++;
 	});
 }
+
+function initialStat(){
+	selectDiv(1,2);
+	showDiv('soon','upcoming');
+}
+initialStat();
 
 allCountDiv.onclick = function() { if(cantChange){return;} selectDiv(0); showDiv('guide-slot_card') };
 soonCountDiv.onclick = function() { if(cantChange){return;} selectDiv(1); showDiv('soon') };
