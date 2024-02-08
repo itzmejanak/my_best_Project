@@ -80,7 +80,7 @@ function initialStat(){
 allCountDiv.onclick = function() { if(cantChange){return;} selectDiv(0); showDiv('guide-slot_card') };
 soonCountDiv.onclick = function() { if(cantChange){return;} selectDiv(1); showDiv('soon') };
 upcomingCountDiv.onclick = function() { if(cantChange){return;} selectDiv(2);  showDiv('upcoming') };
-expiredCountDiv.onclick = function() { if(cantChange){return;} selectDiv(3);  showDiv('expired') };
+expiredCountDiv.onclick = function() { if(cantChange){return;} if(expiredCountDiv.classList.contains('selected')){initialStat();}else{selectDiv(3);  showDiv('expired');} };
 
 
 function updateEventStatus() {
