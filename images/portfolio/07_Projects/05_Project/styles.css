@@ -173,15 +173,34 @@ html, body {
 }
 
 #final{
+    position: relative;
     background-color: #333;
     width: 80%;
     border-radius: 10px;
-    padding: 20px 60px;
+    padding-left: 60px;
+    padding-bottom: 10px;
+    padding-top: 50px;
     color: #f8f8f8;
     display: none;
     margin-bottom: 130px;
 }
-
+#copy{
+    margin-bottom: 8px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    position: absolute;
+    padding: 7px 20px;
+    border: none;
+    background-color: #3e3c3c;
+    color: #e2ebe2c5;
+    box-shadow: 1px 4px 16px rgba(12, 28, 37, 0.365);
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for button interaction */
+}
 /* Your existing CSS code */
 
 /* Media query for screens smaller than 768px */
@@ -246,7 +265,8 @@ html, body {
     }
 
     #final {
-        padding: 15px; /* Adjust padding for the final section on smaller screens */
+        padding-top: 50px;
+        padding-left: 60px; /* Adjust padding for the final section on smaller screens */
     }
 }
 

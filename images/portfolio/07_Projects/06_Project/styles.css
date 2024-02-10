@@ -136,3 +136,46 @@ h1.new-heading {
 .buy-me-coffee a:hover {
     background-color: #FFCA28;
 }
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    /* Adjust container width and padding */
+    #container {
+      width: 70%;
+      padding: 40px;
+    }
+  
+    /* Adjust box width */
+    .box {
+      width: 100%;
+    }
+  }
+  
+  /* Tablet styles */
+  @media (max-width: 767px) {
+    /* Adjust container width and padding */
+    #container {
+      width: 80%;
+      padding: 30px;
+    }
+  
+    /* Adjust box width */
+    .box {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 480px) {
+    /* Adjust container width and padding */
+    #container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    /* Adjust box width */
+    .box {
+      width: 100%;
+    }
+  }
+  

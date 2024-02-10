@@ -42,3 +42,30 @@ function myFunction(){
     document.querySelector("textarea").value = "";
     ol.innerHTML = '';
 }
+let copy = document.getElementById("copy");
+copy.addEventListener("click", function() {
+    let textarea = document.createElement("textarea");
+    if (checkbox.checked) {
+        copy.style.color = "#11A511"
+        copy.style.fontSize = "15px"
+        copy.innerHTML = "This Option may not work properly! But Copied"
+        textarea.value = ol.innerText;
+    } else {
+        copy.style.color = "#11B511"
+        copy.innerHTML = "Copied"
+        textarea.value = result.innerText;
+    }
+    setInterval(() => {
+        copy.style.color = "white"
+        copy.innerHTML = "Copy";
+    }, 5000);
+
+    textarea.style.position = "absolute";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+});
+
