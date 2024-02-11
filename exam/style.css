@@ -448,6 +448,7 @@ body {
             transform: translateX(0);
   }
 }
+
 @keyframes slideIn {
   from {
     -webkit-transform: translateX(-100%);
