@@ -14,19 +14,19 @@ async function checkWeather() {
     let img = document.querySelector("#middle img");
     switch (finalData.weather[0].main) {
         case "Clear":
-            img.src = "/images/clear.png";
+            img.src = "images/clear.png";
             break;
         case "Clouds":
-            img.src = "/images/clouds.png";
+            img.src = "images/clouds.png";
             break;
         case "Drizzle":
-            img.src = "/images/drizzle.png";
+            img.src = "images/drizzle.png";
             break;
         case "Mist":
-            img.src = "/images/mist.png";
+            img.src = "images/mist.png";
             break;
         default:
-            img.src = "/images/rain.png";
+            img.src = "images/rain.png";
             break;
     }
 }
