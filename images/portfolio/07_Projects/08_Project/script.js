@@ -6,7 +6,7 @@ async function checkWeather() {
     let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${api}`);
     var finalData = await data.json();
     let kel = Number(finalData.main.temp);
-    let cen = kel - 273.15;
+    let cen = (kel - 273.15);
     console.log(finalData);
     document.querySelector("#cityName").innerHTML = finalData.name;
     document.querySelector("#celcius").innerHTML = Math.round(cen) + " °C";
