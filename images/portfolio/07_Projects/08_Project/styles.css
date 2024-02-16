@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Your other CSS styles go here */
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #021011;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container styles */
+#main {
+    max-width: 600px;
+    width: 100%;
+    background-image: linear-gradient(120deg, #469764 0%, #4e8ba9 100%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* App container styles */
+#app {
+    text-align: center;
+}
+
+/* Input styles */
+#input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Search button styles */
+#search-btn {
+    background-color: #31767b;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+#search-btn i{
+    font-size: 20px;
+    cursor: pointer;
+}
+/* Middle section styles */
+#middle {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+
+#middle h1{
+    margin: 20px;
+    font-size: 45px;
+    color: antiquewhite;
+}
+
+#middle h2{
+    color: #cea81f;
+    margin: 20px;
+    font-size: 45px;
+}
+
+/* Bottom section styles */
+#bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Weather info container styles */
+.weather-info {
+    text-align: center;
+    /* color: #ccc; */
+}
+
+/* Weather icon styles */
+.weather-info img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Additional weather info styles */
+.weather-info h2 {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #292929;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.weather-info p {
+    font-size: 1rem;
+    padding-top: 7px;
+    color: #323232;
+    font-weight: 600;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+#down{
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Pseudo-elements */
+#search-btn::after {
+    content: "\f002";
+    font-family: FontAwesome;
+    margin-left: 5px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+#middle h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #ce881f;
+    margin: 10px auto;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+#middle h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #1fce30;
+    margin: 10px auto;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+
+/* Hover Effects */
+#search-btn:hover {
+    background-color: #245e63;
+}
+
+#search-btn:hover i {
+    color: #ffdd00;
+}
+
+#input:hover {
+    border-color: #245e63;
+}
+
+#middle h1:hover {
+    color: #ffdd00;
+}
+
+#middle h2:hover {
+    color: #ffdd00;
+}
+
+.weather-info:hover {
+    color: #ffdd00;
+}
+
+.weather-info img:hover {
+    transform: scale(1.1);
+}
+
+.weather-info h2:hover {
+    color: #ffdd00;
+}
+
+.weather-info p:hover {
+    color: #ffdd00;
+}
