@@ -5,9 +5,11 @@ async function checkWeather() {
     let input = document.querySelector("#input").value;
     let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${api}`);
     var finalData = await data.json();
+    let kel = Number(finalData.main.temp);
+    let cen = kel - 273.15;
     console.log(finalData);
     document.querySelector("#cityName").innerHTML = finalData.name;
-    document.querySelector("#celcius").innerHTML = Math.round(finalData.main.temp) + " °F";
+    document.querySelector("#celcius").innerHTML = Math.round(cen) + " °C";
     document.querySelector("#hum").innerHTML = finalData.main.humidity + "%";
     document.querySelector("#speed").innerHTML = finalData.wind.speed + " Km/h";
 
