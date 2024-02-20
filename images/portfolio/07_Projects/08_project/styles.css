@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #333, #333 50%, #252929 75%, #333 75%);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #9e9e9d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  h1 {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #81eee185;
+    font-weight: 900;
+    color: #268ab2;
+  }
+  
+.img{
+    display: flex;
+}
+
+  img {
+    margin: 20px 15px;
+    width: 70px;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 30px);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    padding: 16px 30px;
+    border-radius: 60px;
+    background-color: #de663a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+li {
+    /* background-color: #b2268313; */
+    position: relative;
+    list-style: none;
+    border-bottom: 1px solid rgb(190, 197, 190);
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-bottom: 7px;
+    left: 2px;
+    color: rgb(255, 255, 255);
+    user-select: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+.actino{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+li::before{
+    content: "";
+    position: absolute;
+    border-right: 3px solid rgb(51, 121, 138);
+    height: 23px;
+    width: 23px;
+    left: -35px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    /* margin-right: 30px; */
+}
+
+ul li.checked{
+    color: red;
+    text-decoration: none;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 6px;
+    top: -2px;
+    padding: 1px 5px;
+    color: rgb(252, 226, 226);
+    font-size: 20px;
+}
+
+ul li span:hover{
+    background-color: #221f1f30;
+    border-radius: 50%;
+}
