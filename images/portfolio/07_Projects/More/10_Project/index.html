@@ -31,42 +31,42 @@
 <body>
     <div id="main">
         <div id="container">
-            <div id="result">0</div>
+            <textarea id="result" cols="15" rows="1" placeholder="0" style="resize: none;"></textarea>
+            <div id="result1">0</div>
             <div class="row">
-                <div class="btn" onclick="appendToResult('C')">C</div>
-                <div class="btn" onclick="appendToResult('x²')">x²</div>
-                <div class="btn" onclick="appendToResult('%')">%</div>
-                <div class="btn" onclick="appendToResult('+')" style="background-color: #fdc86c;">+</div>
+                <div class="btn" id="clear">C</div>
+                <div class="btn">x²</div>
+                <div class="btn">%</div>
+                <div class="btn" style="background-color: #fdc86c;">/</div>
             </div>
             <div class="row">
-                <div class="btn" onclick="appendToResult('7')">7</div>
-                <div class="btn" onclick="appendToResult('8')">8</div>
-                <div class="btn" onclick="appendToResult('9')">9</div>
-                <div class="btn" onclick="appendToResult('*')" style="background-color: #fdc86c;">x</div>
+                <div class="btn">7</div>
+                <div class="btn">8</div>
+                <div class="btn">9</div>
+                <div class="btn" style="background-color: #fdc86c;">x</div>
             </div>
             <div class="row">
-                <div class="btn" onclick="appendToResult('4')">4</div>
-                <div class="btn" onclick="appendToResult('5')">5</div>
-                <div class="btn" onclick="appendToResult('6')">6</div>
-                <div class="btn" onclick="appendToResult('-')" style="background-color: #fdc86c;">-</div>
+                <div class="btn">4</div>
+                <div class="btn">5</div>
+                <div class="btn">6</div>
+                <div class="btn" style="background-color: #fdc86c;">+</div>
             </div>
             <div class="row">
-                <div class="btn" onclick="appendToResult('1')">1</div>
-                <div class="btn" onclick="appendToResult('2')">2</div>
-                <div class="btn" onclick="appendToResult('3')">3</div>
-                <div class="btn" onclick="appendToResult('+')" style="background-color: #fdc86c;">+</div>
+                <div class="btn">1</div>
+                <div class="btn">2</div>
+                <div class="btn">3</div>
+                <div class="btn" style="background-color: #fdc86c;">-</div>
             </div>
             <div class="row">
-                <div class="btn" onclick="appendToResult('0')">0</div>
-                <div class="btn" onclick="appendToResult('.')">.</div>
-                <div class="btn" onclick="appendToResult('☒')" style="background-color: #fd9c6c;">☒</div>
-                <div class="btn" onclick="appendToResult('=')" style="background-color: #55d51a;">=</div>
+                <div class="btn">0</div>
+                <div class="btn">.</div>
+                <div class="btn" style="background-color: #fd9c6c;">☒</div>
+                <div class="btn" style="background-color: #55d51a;">=</div>
             </div>
         </div>
         <button id="coffee-btn">Buy me a coffee</button>
         <img src="https://pbs.twimg.com/profile_images/1743190625720348672/djno50xC_400x400.jpg" alt="">
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
