@@ -73,8 +73,10 @@ function selectDiv(div1,div2=div1){
 }
 
 function initialStat(){
-	selectDiv(1,2);
-	showDiv('soon','upcoming');
+	//selectDiv(1,2);
+	selectDiv(1);
+	//showDiv('soon','upcoming');
+	showDiv('soon');
 }
 
 allCountDiv.onclick = function() { if(cantChange){return;} selectDiv(0); showDiv('guide-slot_card') };
