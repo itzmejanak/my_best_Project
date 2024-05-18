@@ -57,7 +57,7 @@ ul
 }
 .main-content
 {
-    padding-left: 270px;
+    padding-left: 0px;
 }
 .padd-15
 {
@@ -246,14 +246,83 @@ ul
 
 
 
+/* General Styling for the Toggler Button */
+.nav-toggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 0;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: flex; /* Changed to flex for centering */
+    align-items: center;
+    justify-content: center;
+    z-index: 999999; /* Ensures the toggler is on top */
+    padding: 10px;
+}
 
-/*aside*/
-.aside
-{
+/* Toggler Span Styling */
+.nav-toggler span {
+    height: 2px;
+    width: 24px;
+    background: var(--skin-color);
+    display: block;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+/* Toggler Span Before and After Styling */
+.nav-toggler span::before,
+.nav-toggler span::after {
+    content: '';
+    height: 2px;
+    width: 24px;
+    background: var(--skin-color);
+    position: absolute;
+    left: 0;
+    transition: top 0.3s ease, transform 0.3s ease;
+}
+
+/* Positioning Before and After Elements */
+.nav-toggler span::before {
+    top: -8px;
+}
+
+.nav-toggler span::after {
+    top: 8px;
+}
+
+/* Hover Effect */
+.nav-toggler:hover span,
+.nav-toggler:hover span::before,
+.nav-toggler:hover span::after {
+    background: #ffffff; /* Change to desired hover color */
+}
+
+/* Active State (For Toggler Animation) */
+.nav-toggler.active span {
+    background: transparent;
+}
+
+.nav-toggler.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.nav-toggler.active span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* Aside and Nav Styling */
+.aside {
     width: 270px;
     background: var(--bg-black-100);
     position: fixed;
-    left: 0;
+    left: -270px; /* Hide by default */
     top: 0;
     padding: 30px;
     height: 100%;
@@ -262,18 +331,22 @@ ul
     justify-content: center;
     align-items: center;
     z-index: 10;
+    transition: left 0.3s ease; /* Smooth transition for aside */
 }
 
-.aside .logo
-{
+/* Show the aside on toggler active */
+.aside.active {
+    left: 0;
+}
+
+.aside .logo {
     position: absolute;
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
 }
 
-.aside .logo a
-{
+.aside .logo a {
     color: var(--text-black-900);
     font-weight: 700;
     padding: 15px 20px;
@@ -282,15 +355,12 @@ ul
     position: relative;
 }
 
-
-.aside .logo a span
-{
+.aside .logo a span {
     font-family: 'Clicker Script', cursive;
     font-size: 45px;
 }
 
-.aside .logo a::before
-{
+.aside .logo a::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -301,8 +371,7 @@ ul
     left: 0;
 }
 
-.aside .logo a::after
-{
+.aside .logo a::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -313,65 +382,16 @@ ul
     right: 0;
 }
 
-.aside .nav-toggler
-{
-    height: 40px;
-    width: 45px;
-    border: 1px solid var(--bg-black-50);
-    cursor: pointer;
-    position: fixed;
-    left: 300px;
-    top: 20px;
-    border-radius: 5px;
-    background: var(--bg-black-100);
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-.aside .nav-toggler span
-{
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    display: inline-block;
-    position: relative;
-}
-
-.aside .nav-toggler span::before
-{
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    position: absolute;
-    top: -6px;
-    left: 0;
-}
-
-.aside .nav-toggler span::after
-{
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    position: absolute;
-    top: 6px;
-    left: 0;
-}
-.aside .nav
-{
+.aside .nav {
     margin-top: 50px;
 }
 
-.aside .nav li
-{
+.aside .nav li {
     margin-bottom: 20px;
     display: block;
 }
 
-
-.aside .nav li a
-{
+.aside .nav li a {
     font-size: 16px;
     font-weight: 600;
     border-bottom: 1px solid var(--bg-black-50);
@@ -380,15 +400,14 @@ ul
     padding: 5px 15px;
 }
 
-.aside .nav li a.active
-{
+.aside .nav li a.active {
     color: var(--skin-color);
 }
 
-.aside .nav li a i
-{
+.aside .nav li a i {
     margin-right: 15px;
 }
+
 
 /*home*/
 .home
@@ -948,6 +967,9 @@ h3.my-profession
 
 @media (max-width:1199px)
 {
+    .nav-toggler {
+        display: flex; /* Show the toggler on smaller screens */
+    }
     .aside
     {
         left: -270px

@@ -61,3 +61,44 @@ boxes.forEach(box => {
         // this.style.borderRadius = "15px";
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggler = document.querySelector('.nav-toggler');
+    const aside = document.querySelector('.aside');
+    toggler.style.zIndex = 9999;
+
+    // Function to close toggle when clicked outside aside menu
+    function closeToggle(event) {
+        if (!aside.contains(event.target) && !toggler.contains(event.target)) {
+            toggler.classList.remove('active');
+            aside.classList.remove('active');
+        }
+    }
+
+    // Event listener for toggler click
+    toggler.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent click event from bubbling up
+        this.classList.toggle('active');
+        aside.classList.toggle('active');
+        aside.style.zIndex = 9999;
+    });
+
+    // Event listener for window click
+    window.addEventListener('click', closeToggle);
+
+    // Event listener for scroll
+    let isScrolling;
+    window.addEventListener('scroll', function() {
+        // Clear the timeout if scroll event is triggered
+        window.clearTimeout(isScrolling);
+        
+        // Check if toggle is active, then turn it off after 500ms of inactivity
+        if (toggler.classList.contains('active') || aside.classList.contains('active')) {
+            isScrolling = setTimeout(function() {
+                toggler.classList.remove('active');
+                aside.classList.remove('active');
+            }, 100);
+        }
+    });
+});
